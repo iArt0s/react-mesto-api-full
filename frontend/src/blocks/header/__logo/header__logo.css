@@ -1,0 +1,20 @@
+.header__logo {
+  width: 104px;
+  height: 24px;
+  margin-bottom: 31px;
+  padding-left: 19px;
+}
+
+@media (min-width: 1024px) {
+  .header__logo {
+
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header__logo {
+    width: 142px;
+    height: 33px;
+  }
+}

@@ -1,0 +1,8 @@
+.popup__close-button_img {
+  width: 30px;
+  height: 30px;
+  top: -50px;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+}

@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 48px;
+  margin-bottom: 36px;
+    width: 100%;
+ }
+
+ @media (min-width: 1024px) {
+  .footer {
+  max-width: 880px;
+  margin: 48px auto 36px auto;
+  /* margin: 0px auto 0px auto; */
+  /* padding-top: 48px;
+  padding-bottom: 36px; */
+
+  }
+}

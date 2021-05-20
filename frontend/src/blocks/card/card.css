@@ -1,0 +1,22 @@
+.card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 282px;
+  position: relative;
+
+ }
+
+ @media (min-width: 1280px) {
+  .card {
+    margin-left: 0;
+    margin-right: 17px;
+  }
+  .card:nth-child(3n) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

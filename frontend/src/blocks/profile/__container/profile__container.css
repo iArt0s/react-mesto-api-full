@@ -1,0 +1,20 @@
+.profile__container{
+  position: relative;
+  display: inline-block;
+}
+
+.profile__container:hover::after{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  content: '';
+  background-image: url('../../../images/edit-profile.svg');
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}

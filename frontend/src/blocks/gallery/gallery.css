@@ -1,0 +1,38 @@
+.gallery {
+
+  margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+
+@media (min-width: 768px) {
+  .gallery {
+    width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+      justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    min-width: 880px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  .gallery {
+
+    min-width: 880px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+  }
+}
