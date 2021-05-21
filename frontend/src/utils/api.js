@@ -88,7 +88,7 @@ class Api {
   }
 
     changeLikeCardStatus(id, isLiked) {
-      return fetch(`${this._url}cards/likes/${id}`, {
+      return fetch(`${this._url}cards/${cardId}/likes/`, {
             method: isLiked ? 'PUT' : 'DELETE',
           'credentials': 'include',
             headers: this.headers

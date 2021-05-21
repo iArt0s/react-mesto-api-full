@@ -56,7 +56,7 @@ app.post('/signup', celebrate({
       return helpers.message('Неправильная ссылка');
     }),
     email: Joi.string().required().email(),
-    password: Joi.string().required().min(10),
+    password: Joi.string().required().min(5),
   }),
 }), createUser);
 
