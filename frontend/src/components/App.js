@@ -37,19 +37,22 @@ function App() {
 
 
     useEffect(() => {
-    api
-        .getInitialCards()
-        .then((data) => {
-          setCards(data);
-        })
-        .catch((err) => console.log(err));
-    api
-        .loadUser()
-        .then((data) => {
-          setCurrentUser(data);
-        })
-        .catch((err) => console.log(err));
-  }, []);
+        const userId = localStorage.getItem('userId');
+        if (userId) {
+            api
+                .getInitialCards()
+                .then((data) => {
+                    setCards(data);
+                })
+                .catch((err) => console.log(err));
+            api
+                .loadUser()
+                .then((data) => {
+                    setCurrentUser(data);
+                })
+                .catch((err) => console.log(err));
+        }
+  }, [loggedIn]);
 
   function handleCardLike(card) {
     const isLiked = card.likes.some((like) => like === currentUser._id);
