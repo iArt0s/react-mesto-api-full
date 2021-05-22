@@ -1,8 +1,7 @@
-const { JWT_SECRET } = process.env;
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 const jwt = require('jsonwebtoken');
 const UnauthorizedError = require('../errors/401-error');
-
 
 exports.Auth = (req, res, next) => {
   const token = req.cookies.userToken;
@@ -14,7 +13,7 @@ exports.Auth = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, JWT_SECRET);
+    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'extremly_secret_key');
   } catch (err) {
     next(new UnauthorizedError('Не достаточно прав1'));
   }
